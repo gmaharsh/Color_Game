@@ -28,7 +28,7 @@ for(var i=0;i<squares.length;i++){
 		}
 		else
 		{
-			alert("Wrong!!!");
+			this.style.background = "#232323";
 		}
 	});
 }
