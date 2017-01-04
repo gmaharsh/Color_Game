@@ -20,5 +20,15 @@ h1{
 }
 
 #message{
-	color:white;
+	color: black;
+	text-align: center;
+}
+
+#stripe{
+    text-align: center;
+    background-color: white;
+}
+
+.selected{
+	background-color: blue;
 }
