@@ -61,6 +61,7 @@ button{
 	transition: all 0.25s;
 	letter-spacing: 1.2px;
 	height: 100%;
+	outline:none;
 }
 
 button:hover{
