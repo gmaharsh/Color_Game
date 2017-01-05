@@ -8,11 +8,13 @@ var h1 = document.getElementById("heading")
 colorDisplay.textContent = pickedcolor;
 var reset = document.getElementById("newgame");
 var easy = document.getElementById("easy");
+var medium = document.getElementById("mdn");
 var hard = document.getElementById("hard");
 
 easy.addEventListener("click",function(){
     hard.classList.remove("selected");
     easy.classList.add("selected");
+	meduim.classList.remove("selected");
 
     numSquares = 3;
     colors = generateRandomColors(numSquares);
@@ -30,9 +32,30 @@ easy.addEventListener("click",function(){
     }
 });
 
+medium.addEventListener("click",function(){
+    hard.classList.remove("selected");
+    easy.classList.remove("selected");
+	medium.classList.add("selected");
+
+    numSquares = 3;
+    colors = generateRandomColors(numSquares);
+
+    pickedcolor = pickcolor();
+
+    colorDisplay.textContent = pickedcolor;
+
+    for(var i=0;i<squares.length;i++){
+    	if(colors[i]){
+            squares[i].style.background = colors[i];
+    	}else{
+    		squares[i].style.display = "none";
+    	}
+    }
+});
 hard.addEventListener("click",function(){
     easy.classList.remove("selected");
     hard.classList.add("selected");
+	medium.classList.remove("selected");
 
     numSquares = 6;
     colors = generateRandomColors(numSquares);
